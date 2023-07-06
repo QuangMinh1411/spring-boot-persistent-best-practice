@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "SerializationFeature.FAIL_ON_EMPTY_BEANS",
+      "type": "java.lang.String",
+      "description": "Description for SerializationFeature.FAIL_ON_EMPTY_BEANS."
+  }
+] }
