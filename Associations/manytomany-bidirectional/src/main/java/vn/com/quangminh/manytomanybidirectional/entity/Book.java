@@ -26,6 +26,7 @@ public class Book implements Serializable {
     private String isbn;
 
     @ManyToMany(mappedBy = "books")
+    @OrderBy("name DESC")
     private Set<Author> authors = new HashSet<>();
 
     @Override

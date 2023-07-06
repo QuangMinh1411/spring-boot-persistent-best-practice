@@ -1,5 +1,6 @@
 package vn.com.quangminh.manytomanybidirectional.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +22,7 @@ public class Author implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
     private String genre;
 
     private int age;
@@ -28,6 +30,7 @@ public class Author implements Serializable {
     @JoinTable(name = "author_book",
     joinColumns = @JoinColumn(name = "author_id"),
     inverseJoinColumns = @JoinColumn(name = "book_id"))
+    @JsonIgnore
     private Set<Book> books = new HashSet<>();
 
     public void addBook(Book book){
@@ -66,6 +69,7 @@ public class Author implements Serializable {
     public String toString() {
         return "Author{" +
                 "id=" + id +
+                ", name='" + name + '\'' +
                 ", genre='" + genre + '\'' +
                 ", age=" + age +
                 '}';

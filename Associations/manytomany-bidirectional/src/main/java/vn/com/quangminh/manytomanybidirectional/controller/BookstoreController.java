@@ -24,4 +24,9 @@ public class BookstoreController {
         service.insertAuthorsWithBooks(id,book);
         return new ResponseEntity<>("Book inserted",HttpStatus.CREATED);
     }
+
+    @GetMapping("/books/{id}")
+    public ResponseEntity<?> fetchAuthorsOfBook(@PathVariable Long id){
+        return new ResponseEntity<>(service.fetchAuthorsFromBook(id),HttpStatus.OK);
+    }
 }
