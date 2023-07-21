@@ -1,5 +1,7 @@
 package com.quangminh.attributelazyloadingbasic.entity;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,6 +13,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@JsonFilter("AuthorId")
 public class Author implements Serializable {
     private static final long serialVersionUID = 1L;
 
