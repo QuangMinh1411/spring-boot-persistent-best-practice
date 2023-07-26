@@ -1,6 +1,7 @@
 package com.quangminh.dtoentityviaprojectionnoassociation.service;
 
 import com.quangminh.dtoentityviaprojectionnoassociation.dto.BookstoreDto;
+import com.quangminh.dtoentityviaprojectionnoassociation.projection.AuthorNameAge;
 import com.quangminh.dtoentityviaprojectionnoassociation.repository.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
@@ -19,5 +20,9 @@ public class BookstoreService {
         List<BookstoreDto> dtos = authorRepository.fetchAll();
 //        dtos.get(index).getAuthor().setAge(age);
         return dtos;
+    }
+
+    public List<AuthorNameAge> fetchByAge(int age){
+        return authorRepository.fetchByAge(age);
     }
 }
