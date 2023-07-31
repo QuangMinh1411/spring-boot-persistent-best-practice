@@ -18,6 +18,11 @@ public class BookstoreController {
         this.bookstoreService = bookstoreService;
     }
 
+    @GetMapping
+    public ResponseEntity<?> getAuthors(){
+        return new ResponseEntity<>(bookstoreService.fetchAuthor(),HttpStatus.OK);
+    }
+
     @GetMapping("/{genre}")
     public ResponseEntity<?> getAllAuthors(@PathVariable String genre){
         return new ResponseEntity<>(bookstoreService.fetchByGenre(genre), HttpStatus.OK);

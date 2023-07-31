@@ -17,4 +17,8 @@ public class BookstoreService {
 
         return authorRepository.findByGenre(genre);
     }
+
+    public List<AuthorDto> fetchAuthor(){
+        return authorRepository.fetchAuthors();
+    }
 }
