@@ -27,4 +27,9 @@ public class BookstoreController {
     public ResponseEntity<?> getAllAuthors(@PathVariable String genre){
         return new ResponseEntity<>(bookstoreService.fetchByGenre(genre), HttpStatus.OK);
     }
+
+    @GetMapping("/tuple")
+    public ResponseEntity<?> getAuthorsByTuple(){
+        return new ResponseEntity<>(bookstoreService.fetchAuthorsByTuple(),HttpStatus.OK);
+    }
 }
