@@ -27,4 +27,9 @@ public class BookstoreController {
     public ResponseEntity<?> fetchNameAndAgeXml(){
         return new ResponseEntity<>(bookstoreService.fetchNameAndAgeXml(), HttpStatus.OK);
     }
+
+    @GetMapping("/dao")
+    public ResponseEntity<?> fetchDao(){
+        return new ResponseEntity<>(bookstoreService.fetchAuthorByEntity(),HttpStatus.OK);
+    }
 }
