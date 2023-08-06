@@ -17,4 +17,8 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
     @Transactional(readOnly = true)
     @Query("select a from Author a join fetch a.books b where b.price>?1")
     List<Author> fetchAuthorsBooksByPriceJoinFetch(int price);
+    @Transactional(readOnly = true)
+    @Query("select a from Author a left join fetch a.books")
+    List<Author> fetchAuthorWithBooks();
+
 }
