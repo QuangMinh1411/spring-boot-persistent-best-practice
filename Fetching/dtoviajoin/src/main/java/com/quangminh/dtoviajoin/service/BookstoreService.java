@@ -1,8 +1,7 @@
 package com.quangminh.dtoviajoin.service;
 
-import com.quangminh.dtoviajoin.entity.Author;
-import com.quangminh.dtoviajoin.projection.AuthorRepository;
-import com.quangminh.dtoviajoin.repository.AuthorNameBookTitle;
+import com.quangminh.dtoviajoin.projection.AuthorNameBookTitle;
+import com.quangminh.dtoviajoin.repository.AuthorRepository;
 import com.quangminh.dtoviajoin.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
@@ -66,12 +65,17 @@ public class BookstoreService {
     }
 
     // Fetch authors and books excluding authors that have registered books (JPQL)
-    public List<AuthorNameBookTitle> fetchAuthorsAndBooksJpql() {
-        return authorRepository.findAuthorsAndBooksJpql();
+    public List<AuthorNameBookTitle> fetchAuthorsAndBooksJpqlLeftJoinExcluding() {
+        return authorRepository.findAuthorsAndBooksJpqlLeftJoinExcluding();
     }
 
     // Fetch authors and books excluding authors that have registered books (SQL)
     public List<AuthorNameBookTitle> fetchAuthorsAndBooksSql() {
-        return authorRepository.findAuthorsAndBooksSql();
+        return authorRepository.findAuthorsAndBooksSqlLeftJoinExcluding();
+    }
+
+    // Fetch all authors and books (SQL)
+    public List<AuthorNameBookTitle> fetchAuthorsAndBooksSqlFullJoin() {
+        return authorRepository.findAuthorsAndBooksSqlFullJoin();
     }
 }

@@ -1,7 +1,5 @@
 package com.quangminh.dtoviajoin.controller;
 
-import com.quangminh.dtoviajoin.projection.AuthorRepository;
-import com.quangminh.dtoviajoin.repository.BookRepository;
 import com.quangminh.dtoviajoin.service.BookstoreService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,5 +25,9 @@ public class BookstoreController {
     @GetMapping("/genre-price")
     public ResponseEntity<?> findAuthorsAndBooksByGenreAndPriceJpql(@RequestParam("genre")String genre,@RequestParam("price")int price){
         return new ResponseEntity<>(bookstoreService.findAuthorsAndBooksByGenreAndPriceJpql(genre,price),HttpStatus.OK);
+    }
+    @GetMapping("/full")
+    public ResponseEntity<?> fetchAuthorAndBookFull(){
+        return new ResponseEntity<>(bookstoreService.fetchAuthorsAndBooksSqlFullJoin(),HttpStatus.OK);
     }
 }

@@ -1,7 +1,7 @@
-package com.quangminh.dtoviajoin.projection;
+package com.quangminh.dtoviajoin.repository;
 
-import com.quangminh.dtoviajoin.repository.AuthorNameBookTitle;
 import com.quangminh.dtoviajoin.entity.Author;
+import com.quangminh.dtoviajoin.projection.AuthorNameBookTitle;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
@@ -54,4 +54,15 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
             + "FROM author a LEFT JOIN book b ON a.id = b.author_id WHERE b.id IS NULL",
             nativeQuery = true)
     List<AuthorNameBookTitle> findAuthorsAndBooksSqlLeftJoinExcluding();
+
+    // Fetch all authors and books (SQL)
+    @Query(value = "(SELECT b.title AS title, a.name AS name FROM author a "
+            + "LEFT JOIN book b ON a.id = b.author_id) "
+            + "UNION " //  will remove duplicates (use UNION ALL to keep duplicates)
+            + "(SELECT b.title AS title, a.name AS name FROM author a "
+            + "RIGHT JOIN book b ON a.id = b.author_id "
+            + "WHERE a.id IS NULL)",
+            nativeQuery = true)
+    List<AuthorNameBookTitle> findAuthorsAndBooksSqlFullJoin();
+
 }

@@ -4,7 +4,7 @@ import com.quangminh.dtoviajoin.entity.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
-
+import com.quangminh.dtoviajoin.projection.AuthorNameBookTitle;
 import java.util.List;
 @Transactional(readOnly = true)
 public interface BookRepository extends JpaRepository<Book, Long> {
