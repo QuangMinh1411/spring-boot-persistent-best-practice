@@ -57,8 +57,8 @@ public class BookstoreService {
     }
 
     // JOIN FETCH
-    public List<Author> fetchAuthorsBooksByPriceJoinFetch() {
-        List<Author> authors = authorRepository.fetchAuthorsBooksByPriceJoinFetch(40);
+    public List<Author> fetchAuthorsBooksByPriceJoinFetch(int price) {
+        List<Author> authors = authorRepository.fetchAuthorsBooksByPriceJoinFetch(price);
 
         authors.forEach((e) -> System.out.println("Author name: " + e.getName()
                 + ", books: " + e.getBooks())); // does not cause extra SELECTs and the result is ok

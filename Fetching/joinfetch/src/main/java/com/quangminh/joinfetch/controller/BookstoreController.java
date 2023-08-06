@@ -27,11 +27,15 @@ public class BookstoreController {
         return new ResponseEntity<>(bookstoreService.fetchBookWithAuthorByIsbn(isbn), HttpStatus.OK);
     }
 
-    @GetMapping("/authors/{price}")
+    @GetMapping("/authors/innerjoin/{price}")
     public ResponseEntity<?> fetchAuthorsBooksByPriceInnerJoin(@PathVariable int price){
         return new ResponseEntity<>(bookstoreService.fetchAuthorsBooksByPriceInnerJoin(price),HttpStatus.OK);
     }
 
+    @GetMapping("/authors/joinfetch/{price}")
+    public ResponseEntity<?> fetchAuthorsBooksByPriceJoinFetch(@PathVariable int price){
+        return new ResponseEntity<>(bookstoreService.fetchAuthorsBooksByPriceJoinFetch(price),HttpStatus.OK);
+    }
     @GetMapping("/books")
     public ResponseEntity<?> fetchBooksAuthorsInnerJoinGood(){
         return new ResponseEntity<>(bookstoreService.fetchBooksAuthorsInnerJoinGood(),HttpStatus.OK);
