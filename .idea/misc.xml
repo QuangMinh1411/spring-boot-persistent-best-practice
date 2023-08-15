@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Entity/clone-entity/pom.xml" />
+        <option value="$PROJECT_DIR$/Entity/domain-event/pom.xml" />
+        <option value="$PROJECT_DIR$/Entity/map-boolean-yesno/pom.xml" />
+        <option value="$PROJECT_DIR$/Batching/inserts-jpa-repository/pom.xml" />
+        <option value="$PROJECT_DIR$/Batching/InsertOrderBatchPerTransaction/pom.xml" />
+        <option value="$PROJECT_DIR$/Batching/batch-insert-entity-via-jpacontext/pom.xml" />
+        <option value="$PROJECT_DIR$/Batching/batch-insert-spring-batch-per-persistent/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/joinfetch/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/dtoviajoin/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/stream-mysql/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/sub-entities/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/dtoconstructor/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/dtoviacrossjoin/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/join-pagination/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/loadmultipleIds/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/reuse-projection/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/dto-result-transformer/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/dto-unrelated-entities/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/dtoentityviaprojection/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/dtospringprojection-all/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/projectionandcollections/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/attribute-lazy-loading-basic/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/dto-custom-result-transformer/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/dto-via-projection-interfaceinrepo/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/resultsetmapping-namednavtivequery/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/dto-setmapping-and-name-nativequery/pom.xml" />
+        <option value="$PROJECT_DIR$/Fetching/dtoentity-via-projection-noassociation/pom.xml" />
+        <option value="$PROJECT_DIR$/Associations/names-subgraph/pom.xml" />
+        <option value="$PROJECT_DIR$/Associations/NamedEntityGraph/pom.xml" />
+        <option value="$PROJECT_DIR$/Associations/one-to-one-mapsid/pom.xml" />
+        <option value="$PROJECT_DIR$/Associations/filter-association/pom.xml" />
+        <option value="$PROJECT_DIR$/Associations/cascadechildremoval/pom.xml" />
+        <option value="$PROJECT_DIR$/Associations/OneToManyBidirectional/pom.xml" />
+        <option value="$PROJECT_DIR$/Associations/manytoone-undirectional/pom.xml" />
+        <option value="$PROJECT_DIR$/Associations/manytomany-bidirectional/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

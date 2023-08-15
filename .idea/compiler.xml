@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sub-entities" />
+        <module name="NamedEntityGraph" />
+        <module name="clone-entity" />
+        <module name="domain-event" />
+        <module name="batch-per-persistent" />
+        <module name="attribute-lazy-loading-basic" />
+        <module name="dtoviajoin" />
+        <module name="reuse-projection" />
+        <module name="dtoentity-via-projection-noassociation" />
+        <module name="map-boolean-yesno" />
+        <module name="OneToManyBidirectional" />
+        <module name="dto-via-projection-interfaceinrepo" />
+        <module name="resultsetmapping-namednavtivequery" />
+        <module name="dtoconstructor" />
+        <module name="dtospringprojection-all" />
+        <module name="names-subgraph" />
+        <module name="dtoviacrossjoin" />
+        <module name="manytomany-bidirectional" />
+        <module name="loadmultipleIds" />
+        <module name="insert-via-jpacontext" />
+        <module name="stream-mysql" />
+        <module name="result-transformer" />
+        <module name="dto-setmapping-and-name-nativequery" />
+        <module name="dtoentityviaprojection" />
+        <module name="projectionandcollections" />
+        <module name="one-to-one-mapsid" />
+        <module name="custom-result-transformer" />
+        <module name="filter-association" />
+        <module name="InsertOrderBatch" />
+        <module name="inserts-jpa-repository" />
+        <module name="unrelated-entities" />
+        <module name="joinfetch" />
+        <module name="cascadechildremoval" />
+        <module name="manytoone-undirectional" />
+        <module name="join-pagination" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="InsertOrderBatch" options="-parameters" />
+      <module name="NamedEntityGraph" options="-parameters" />
+      <module name="OneToManyBidirectional" options="-parameters" />
+      <module name="attribute-lazy-loading-basic" options="-parameters" />
+      <module name="batch-per-persistent" options="-parameters" />
+      <module name="cascadechildremoval" options="-parameters" />
+      <module name="clone-entity" options="-parameters" />
+      <module name="custom-result-transformer" options="-parameters" />
+      <module name="domain-event" options="-parameters" />
+      <module name="dto-setmapping-and-name-nativequery" options="-parameters" />
+      <module name="dto-via-projection-interfaceinrepo" options="-parameters" />
+      <module name="dtoconstructor" options="-parameters" />
+      <module name="dtoentity-via-projection-noassociation" options="-parameters" />
+      <module name="dtoentityviaprojection" options="-parameters" />
+      <module name="dtospringprojection-all" options="-parameters" />
+      <module name="dtoviacrossjoin" options="-parameters" />
+      <module name="dtoviajoin" options="-parameters" />
+      <module name="filter-association" options="-parameters" />
+      <module name="insert-via-jpacontext" options="-parameters" />
+      <module name="inserts-jpa-repository" options="-parameters" />
+      <module name="join-pagination" options="-parameters" />
+      <module name="joinfetch" options="-parameters" />
+      <module name="loadmultipleIds" options="-parameters" />
+      <module name="manytomany-bidirectional" options="-parameters" />
+      <module name="manytoone-undirectional" options="-parameters" />
+      <module name="map-boolean-yesno" options="-parameters" />
+      <module name="names-subgraph" options="-parameters" />
+      <module name="one-to-one-mapsid" options="-parameters" />
+      <module name="projectionandcollections" options="-parameters" />
+      <module name="result-transformer" options="-parameters" />
+      <module name="resultsetmapping-namednavtivequery" options="-parameters" />
+      <module name="reuse-projection" options="-parameters" />
+      <module name="stream-mysql" options="-parameters" />
+      <module name="sub-entities" options="-parameters" />
+      <module name="unrelated-entities" options="-parameters" />
+    </option>
+  </component>
+</project>

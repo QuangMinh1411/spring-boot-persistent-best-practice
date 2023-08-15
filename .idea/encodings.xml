@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Associations/NamedEntityGraph/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/NamedEntityGraph/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/OneToManyBidirectional/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/OneToManyBidirectional/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/cascadechildremoval/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/cascadechildremoval/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/filter-association/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/filter-association/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/manytomany-bidirectional/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/manytomany-bidirectional/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/manytoone-undirectional/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/manytoone-undirectional/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/names-subgraph/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/names-subgraph/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/one-to-one-mapsid/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Associations/one-to-one-mapsid/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Batching/InsertOrderBatchPerTransaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Batching/batch-insert-entity-via-jpacontext/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Batching/batch-insert-spring-batch-per-persistent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Batching/inserts-jpa-repository/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Entity/clone-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Entity/clone-entity/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Entity/domain-event/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Entity/domain-event/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Entity/map-boolean-yesno/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Entity/map-boolean-yesno/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/attribute-lazy-loading-basic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/dto-custom-result-transformer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/dto-result-transformer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/dto-setmapping-and-name-nativequery/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/dto-unrelated-entities/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/dto-via-projection-interfaceinrepo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/dtoconstructor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/dtoentity-via-projection-noassociation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/dtoentityviaprojection/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/dtospringprojection-all/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/dtoviacrossjoin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/dtoviajoin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/join-pagination/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/joinfetch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/loadmultipleIds/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/loadmultipleIds/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/projectionandcollections/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/resultsetmapping-namednavtivequery/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/reuse-projection/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/stream-mysql/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Fetching/sub-entities/src/main/java" charset="UTF-8" />
+  </component>
+</project>
