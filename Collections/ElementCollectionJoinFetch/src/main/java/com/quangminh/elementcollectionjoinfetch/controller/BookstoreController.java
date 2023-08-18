@@ -21,10 +21,17 @@ public class BookstoreController {
     public ResponseEntity<?> getAll(){
         return new ResponseEntity<>(shoppingCartService.allShoppingCart(), HttpStatus.OK);
     }
+    @GetMapping("/dto")
+    public ResponseEntity<?> getAllDto(){
+        return new ResponseEntity<>(shoppingCartService.getDto(), HttpStatus.OK);
+    }
 
     @GetMapping("/{price}")
     public ResponseEntity<?> byPrice(@PathVariable int price){
         return new ResponseEntity<>(shoppingCartService.byPriceShoppingCart(price),HttpStatus.OK);
     }
-
+    @GetMapping("/dto/{price}")
+    public ResponseEntity<?> byPriceDto(@PathVariable int price){
+        return new ResponseEntity<>(shoppingCartService.byPriceDto(price),HttpStatus.OK);
+    }
 }
