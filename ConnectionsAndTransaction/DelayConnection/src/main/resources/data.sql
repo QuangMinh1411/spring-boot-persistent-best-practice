@@ -1,0 +1,1 @@
+insert into author (age,name,genre) values (23,"mark jane","anthology");
