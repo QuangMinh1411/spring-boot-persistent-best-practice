@@ -1,6 +1,7 @@
 package com.quangminh.jpqlfunctionparam.service;
 
 import com.quangminh.jpqlfunctionparam.dao.Dao;
+import com.quangminh.jpqlfunctionparam.entity.Book;
 import com.quangminh.jpqlfunctionparam.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
@@ -20,5 +21,8 @@ public class BookstoreService {
         return bookRepository.fetchTitleAndPrice("$", Instant.now(),id);
         // or, via EntityManager from Dao class
         //return dao.fetchNameAndAmount("$", Instant.now());
+    }
+    public Book fetchBookByIsbn(String code,String author){
+        return bookRepository.fetchByIsbn(code,author);
     }
 }
