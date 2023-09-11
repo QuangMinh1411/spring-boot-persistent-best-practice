@@ -1,0 +1,10 @@
+insert into author (age, name, genre) values (57, 'Niel McGrae', 'romance');
+insert into author (age, name, genre) values (44, 'Purcell Robertazzi', 'horror');
+insert into author (age, name, genre) values (43, 'Jessica Coley', 'comedy');
+insert into author (age, name, genre) values (21, 'Jacquenette Lacoste', 'horror');
+insert into author (age, name, genre) values (36, 'Tricia Bartoszewicz', 'comedy');
+insert into author (age, name, genre) values (41, 'Sandie McElree', 'horror');
+insert into author (age, name, genre) values (22, 'Lira Jakolevitch', 'comedy');
+insert into author (age, name, genre) values (20, 'Bartolemo Gaskin', 'comedy');
+insert into author (age, name, genre) values (20, 'Antonina McGerraghty', 'romance');
+insert into author (age, name, genre) values (42, 'Morgana Huske', 'horror');
