@@ -24,4 +24,8 @@ public class BookstoreService {
 
         return pageOfAuthors;
     }
+    public List<AuthorDto> fetchNextPageWithTotal(int page, int size,String critical) {
+
+        return authorRepository.fetchAllWithTotal(critical,page, size);
+    }
 }

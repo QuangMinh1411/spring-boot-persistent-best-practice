@@ -12,4 +12,8 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
     @Query(value = "SELECT name, age, COUNT(*) OVER() AS total FROM author",
             nativeQuery = true)
     List<AuthorDto> fetchAll(Pageable pageable);
+
+    @Query(value = "SELECT name, age, COUNT(*) OVER() AS total FROM author ORDER BY ?1 LIMIT ?2, ?3",
+            nativeQuery = true)
+    List<AuthorDto> fetchAllWithTotal(String critical,int page, int size);
 }

@@ -9,6 +9,6 @@ public interface AuthorDto {
     int getAge();
 
     String getName();
-    @JsonIgnore
+//    @JsonIgnore
     long getTotal();
 }
