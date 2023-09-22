@@ -18,7 +18,7 @@ public class Author {
     private String name;
     private String genre;
 
-    @JsonIgnore
+//    @JsonIgnore
     @Column(insertable = false, updatable = false)
     long total;
 

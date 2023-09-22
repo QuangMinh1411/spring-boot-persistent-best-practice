@@ -23,4 +23,9 @@ public class BookstoreController {
     public ResponseEntity<?> fetchAuthors(@PathVariable int page,@PathVariable int size){
         return new ResponseEntity<>(bookstoreService.fetchNextPage(page, size), HttpStatus.OK);
     }
+
+    @GetMapping("/list/{page}/{size}")
+    public ResponseEntity<?> fetchAuthorsList(@PathVariable int page,@PathVariable int size){
+        return new ResponseEntity<>(bookstoreService.fetchNextPageList(page, size), HttpStatus.OK);
+    }
 }
