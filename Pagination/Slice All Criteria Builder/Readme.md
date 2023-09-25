@@ -20,7 +20,15 @@ public Slice<Author> fetchNextSlice(int page, int size) {
 return authorRepository.findAll(PageRequest.of(page, size, new Sort(Sort.Direction.ASC, "age")));
 }
 
-Other implementations::
+This implementation:
+
+This is an implementation that allows us to provide a Sort and a Spring Data Specification.
+Usage example:
+public static Specification<Author> isAgeGt45() {
+...
+}
+
+All implementations::
 
 This is just another minimalist implementation based on a hard-coded SQL
 This is an implementation that allows us to provide a Sort, so sorting results is possible
