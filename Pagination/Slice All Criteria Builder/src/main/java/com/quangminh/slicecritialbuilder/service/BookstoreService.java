@@ -28,9 +28,15 @@ public class BookstoreService {
 //        return authorRepository.findAll(PageRequest.of(page, size, Sort.by(Sort.Direction.DESC,"age")));
 //    }
 
+//    public Slice<Author> fetchNextSlice(int page, int size) {
+//
+//        return authorRepository.findAll(isAgeGt45(),
+//                PageRequest.of(page, size, Sort.by(Sort.Direction.ASC,"age")));
+//    }
+
     public Slice<Author> fetchNextSlice(int page, int size) {
 
-        return authorRepository.findAll(isAgeGt45(),
-                PageRequest.of(page, size, Sort.by(Sort.Direction.ASC,"age")));
+        return authorRepository.findAll(PageRequest.of(page, size));
     }
+
 }

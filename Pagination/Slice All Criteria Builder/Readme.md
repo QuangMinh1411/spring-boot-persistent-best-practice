@@ -28,6 +28,33 @@ public static Specification<Author> isAgeGt45() {
 ...
 }
 
+This implementation:
+
+This is an implementation that allows us to provide a Sort, a LockModeType, a QueryHints and a Spring Data Specification
+Usage example:
+public static Specification<Author> isAgeGt45() {
+...
+}
+
+public Slice<Author> fetchNextSlice(int page, int size) {
+// hint example
+Map<String, Object> hints = new HashMap<>();
+hints.put("...", value);
+
+    return authorRepository.findAll(isAgeGt45(),
+        PageRequest.of(page, size, new Sort(Sort.Direction.ASC, "age")),
+        LockModeType..., hints);
+}
+
+This implementation:
+
+This is an implementation that allows us to provide a Spring Data Pageable and/or Specification by extending the SimpleJpaRepository from Spring Data. Bascially, this implementation is the only one that returns Page<T> instead of Slice<T>, but it doesn't trigger the extra SELECT COUNT since it was eliminated by overriding the Page<T> readPage(...) method from SimpleJpaRepository. The main drawback is that by returing a Page<T> you don't know if there is a next page or the current one is the last. Nevertheless, there are workarounds to have this as well. In this implementation you cannot set LockModeType or query hints.
+Usage example:
+public Slice<Author> fetchNextSlice(int page, int size) {
+return authorRepository.findAll(PageRequest.of(page, size));
+}
+
+
 All implementations::
 
 This is just another minimalist implementation based on a hard-coded SQL
