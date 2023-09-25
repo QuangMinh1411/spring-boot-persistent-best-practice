@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.SliceImpl;
+import org.springframework.data.jpa.repository.query.QueryUtils;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -45,6 +46,10 @@ public abstract class SlicePagingRepositoryImplementation<T>{
         CriteriaQuery<T> cq = cb.createQuery(entityClass);
         Root<T> rootEntry = cq.from(entityClass);
         CriteriaQuery<T> all = cq.select(rootEntry);
+
+        if(pageable.getSort().isSorted()) {
+            all.orderBy(QueryUtils.toOrders(pageable.getSort(), rootEntry, cb));
+        }
 
         TypedQuery<T> query = entityManager.createQuery(all);
 
