@@ -27,4 +27,9 @@ public class BookstoreController {
     public ResponseEntity<?> fetchAuthorWithoutBooks(@PathVariable String name) {
         return new ResponseEntity<>(bookstoreService.fetchAuthorWithoutBooks(name),HttpStatus.OK);
     }
+
+    @GetMapping("/fetchBook/{text}")
+    public ResponseEntity<?> fetchBooksContaining(@PathVariable String text){
+        return new ResponseEntity<>(bookstoreService.fetchBooks(text),HttpStatus.OK);
+    }
 }
