@@ -14,4 +14,4 @@ SELECT
     a.genre
 FROM
     author a
-WHERE a.genre = "Anthology";
+WHERE a.genre = "Anthology" WITH CHECK OPTION;

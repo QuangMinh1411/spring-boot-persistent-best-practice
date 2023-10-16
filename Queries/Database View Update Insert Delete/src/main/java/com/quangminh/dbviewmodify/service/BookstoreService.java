@@ -38,4 +38,16 @@ public class BookstoreService {
 
         authorAnthologyViewRepository.delete(author);
     }
+
+    // Doesn't work
+    // WITH CHECK OPTION doesn't allow this insert
+    // expect to see: java.sql.SQLException: CHECK OPTION failed 'bookstoredb.author_anthology_view'
+    public void insertHistoryAuthorInView() {
+        AuthorAnthologyView author = new AuthorAnthologyView();
+        author.setName("Mark Powell");
+        author.setGenre("History"); // this field doesn't pass the check
+        author.setAge(45);
+
+        authorAnthologyViewRepository.save(author);
+    }
 }
