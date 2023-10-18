@@ -1,5 +1,6 @@
 package com.quangminh.sequentialnumber.service;
 
+import com.quangminh.sequentialnumber.AuthorDtoRank;
 import com.quangminh.sequentialnumber.dto.AuthorDto;
 import com.quangminh.sequentialnumber.repository.AuthorRepository;
 import org.springframework.stereotype.Service;
@@ -43,6 +44,23 @@ public class BookstoreService {
 
         authors.forEach(a -> System.out.println(a.getRowNum()
                 + ", " + a.getName() + ", " + a.getAge()));
+        return authors;
+    }
+
+    //Rank
+    public List<AuthorDtoRank> fetchAuthorsWithRank1() {
+        List<AuthorDtoRank> authors = authorRepository.fetchWithRank1();
+
+        authors.forEach(a -> System.out.println(a.getRankNum()
+                + ", " + a.getName() + ", " + a.getGenre()));
+        return authors;
+    }
+
+    public List<AuthorDtoRank> fetchAuthorsWithRank2() {
+        List<AuthorDtoRank> authors = authorRepository.fetchWithRank2();
+
+        authors.forEach(a -> System.out.println(a.getRankNum()
+                + ", " + a.getName() + ", " + a.getGenre()));
         return authors;
     }
 

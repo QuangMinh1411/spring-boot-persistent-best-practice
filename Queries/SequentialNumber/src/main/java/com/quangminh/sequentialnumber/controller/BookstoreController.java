@@ -36,4 +36,14 @@ public class BookstoreController {
     public ResponseEntity<?> fetchAuthorsWithSeqNumber4(){
         return new ResponseEntity<>(bookstoreService.fetchAuthorsWithSeqNumber4(), HttpStatus.OK);
     }
+
+    @GetMapping("/rank1")
+    public ResponseEntity<?> fetchAuthorsWithRank1(){
+        return new ResponseEntity<>(bookstoreService.fetchAuthorsWithRank1(),HttpStatus.OK);
+    }
+
+    @GetMapping("/rank2")
+    public ResponseEntity<?> fetchAuthorsWithRank2(){
+        return new ResponseEntity<>(bookstoreService.fetchAuthorsWithRank2(),HttpStatus.OK);
+    }
 }
