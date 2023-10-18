@@ -1,6 +1,7 @@
 package com.quangminh.sequentialnumber.repository;
 
-import com.quangminh.sequentialnumber.AuthorDtoRank;
+import com.quangminh.sequentialnumber.dto.AuthorDtoDenseRank;
+import com.quangminh.sequentialnumber.dto.AuthorDtoRank;
 import com.quangminh.sequentialnumber.dto.AuthorDto;
 import com.quangminh.sequentialnumber.entity.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -41,4 +42,19 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
             + "rankNum, name, genre FROM author ORDER BY name",
             nativeQuery = true)
     List<AuthorDtoRank> fetchWithRank2();
+
+    //Dense Rank
+    @Query(value = "SELECT DENSE_RANK() OVER(ORDER BY genre) "
+            + "rankNum, name, genre, age FROM author",
+            nativeQuery = true)
+    List<AuthorDtoDenseRank> fetchWithDenseRank1();
+
+    @Query(value = "SELECT DENSE_RANK() OVER(ORDER BY genre) "
+            + "rankNum, name, genre, age FROM author ORDER BY name",
+            nativeQuery = true)
+    List<AuthorDtoDenseRank> fetchWithDenseRank2();
+    @Query(value = "SELECT DENSE_RANK() OVER(PARTITION BY genre ORDER BY age DESC) "
+            + "rankNum, name, genre, age FROM author",
+            nativeQuery = true)
+    List<AuthorDtoDenseRank> fetchWithDenseRank3();
 }

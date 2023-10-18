@@ -1,4 +1,4 @@
-package com.quangminh.sequentialnumber;
+package com.quangminh.sequentialnumber.dto;
 
 /**
  * Projection for {@link com.quangminh.sequentialnumber.entity.Author}

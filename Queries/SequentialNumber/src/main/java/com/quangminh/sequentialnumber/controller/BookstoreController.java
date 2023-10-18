@@ -46,4 +46,19 @@ public class BookstoreController {
     public ResponseEntity<?> fetchAuthorsWithRank2(){
         return new ResponseEntity<>(bookstoreService.fetchAuthorsWithRank2(),HttpStatus.OK);
     }
+
+    @GetMapping("/dense-rank1")
+    public ResponseEntity<?> fetchAuthorsWithDenseRank1(){
+        return new ResponseEntity<>(bookstoreService.fetchWithDenseRank1(),HttpStatus.OK);
+    }
+
+    @GetMapping("/dense-rank2")
+    public ResponseEntity<?> fetchAuthorsWithDenseRank2(){
+        return new ResponseEntity<>(bookstoreService.fetchWithDenseRank2(),HttpStatus.OK);
+    }
+
+    @GetMapping("/dense-rank3")
+    public ResponseEntity<?> fetchAuthorsWithDenseRank3(){
+        return new ResponseEntity<>(bookstoreService.fetchWithDenseRank3(),HttpStatus.OK);
+    }
 }

@@ -1,6 +1,7 @@
 package com.quangminh.sequentialnumber.service;
 
-import com.quangminh.sequentialnumber.AuthorDtoRank;
+import com.quangminh.sequentialnumber.dto.AuthorDtoDenseRank;
+import com.quangminh.sequentialnumber.dto.AuthorDtoRank;
 import com.quangminh.sequentialnumber.dto.AuthorDto;
 import com.quangminh.sequentialnumber.repository.AuthorRepository;
 import org.springframework.stereotype.Service;
@@ -64,4 +65,15 @@ public class BookstoreService {
         return authors;
     }
 
+    public List<AuthorDtoDenseRank> fetchWithDenseRank1() {
+        return authorRepository.fetchWithDenseRank1();
+    }
+
+    public List<AuthorDtoDenseRank> fetchWithDenseRank2() {
+        return authorRepository.fetchWithDenseRank2();
+    }
+
+    public List<AuthorDtoDenseRank> fetchWithDenseRank3() {
+        return authorRepository.fetchWithDenseRank3();
+    }
 }
