@@ -3,6 +3,7 @@ package com.quangminh.sequentialnumber.repository;
 import com.quangminh.sequentialnumber.dto.AuthorDtoDenseRank;
 import com.quangminh.sequentialnumber.dto.AuthorDtoRank;
 import com.quangminh.sequentialnumber.dto.AuthorDto;
+import com.quangminh.sequentialnumber.dto.AuthorNTileDto;
 import com.quangminh.sequentialnumber.entity.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -57,4 +58,18 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
             + "rankNum, name, genre, age FROM author",
             nativeQuery = true)
     List<AuthorDtoDenseRank> fetchWithDenseRank3();
+
+
+    //Ntile
+    @Query(value = "SELECT NTILE(2) OVER(ORDER BY age)"
+    +"tile,name,genre,age FROM author",nativeQuery = true)
+    List<AuthorNTileDto> fetchWithNTile1();
+
+    @Query(value = "SELECT NTILE(3) OVER(ORDER BY age)"
+            +"tile,name,genre,age FROM author",nativeQuery = true)
+    List<AuthorNTileDto> fetchWithNTile2();
+
+    @Query(value = "SELECT NTILE(2) OVER(PARTITION BY age ORDER BY age DESC)"
+            +"tile,name,genre,age FROM author",nativeQuery = true)
+    List<AuthorNTileDto> fetchWithNTile3();
 }
