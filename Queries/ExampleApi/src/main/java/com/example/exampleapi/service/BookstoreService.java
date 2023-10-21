@@ -1,0 +1,37 @@
+package com.example.exampleapi.service;
+
+import com.example.exampleapi.entity.Book;
+import com.example.exampleapi.repository.BookRepository;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.stereotype.Service;
+
+@Service
+public class BookstoreService {
+
+    private final BookRepository bookRepository;
+
+    public BookstoreService(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
+
+    public boolean existsBook1(Book book) {
+
+        Example<Book> bookExample = Example.of(book);
+        return bookRepository.exists(bookExample);
+    }
+
+    public boolean existsBook2(Book book) {
+
+        Example<Book> bookExample = Example.of(book,
+                ExampleMatcher.matchingAll().withIgnorePaths("genre", "price"));
+        return bookRepository.exists(bookExample);
+    }
+
+    public boolean existsBook3(Book book) {
+
+        Example<Book> bookExample = Example.of(book,
+                ExampleMatcher.matchingAny().withIgnorePaths("genre", "price"));
+        return bookRepository.exists(bookExample);
+    }
+}
