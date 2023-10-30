@@ -1,0 +1,43 @@
+insert into author (name, age, genre) values ('Essie Bail', 33, 'horror');
+insert into author (name, age, genre) values ('Harper Syalvester', 41, 'comedy');
+insert into author (name, age, genre) values ('Mufinella Bunt', 26, 'drama');
+insert into author (name, age, genre) values ('Chery Powner', 33, 'romance');
+insert into author (name, age, genre) values ('Sheff Camois', 49, 'action');
+insert into author (name, age, genre) values ('Danna Sustin', 50, 'comedy');
+insert into author (name, age, genre) values ('Margery Waything', 52, 'comedy');
+insert into author (name, age, genre) values ('Fabien Gullam', 38, 'comedy');
+insert into author (name, age, genre) values ('Pat Dutnall', 25, 'comedy');
+insert into author (name, age, genre) values ('Yehudi Echelle', 54, 'drama');
+
+insert into book (isbn, title, dtype, author_id) values ('847033518-9', 'Novocaine', 'Book', 5);
+insert into book (isbn, title, dtype, author_id) values ('772861137-2', 'Trial of the Road (Check-up on the Roads) (Checkpoint) (Proverka na dorogakh)', 'Book', 8);
+insert into book (isbn, title, dtype, author_id) values ('005779640-8', 'Tribes', 'Book', 5);
+insert into book (isbn, title, dtype, author_id) values ('595057122-3', 'Cry of the Owl, The', 'Book', 7);
+insert into book (isbn, title, dtype, author_id) values ('874765359-0', 'Thurgood', 'Book', 4);
+insert into book (isbn, title, dtype, author_id) values ('732078739-3', 'Rules of the Game, The (La règle du jeu)', 'Book', 7);
+insert into book (isbn, title, dtype, author_id) values ('253057192-9', 'Games People Play: New York', 'Book', 5);
+insert into book (isbn, title, dtype, author_id) values ('106266873-1', 'Revolt of the Zombies', 'Book', 6);
+insert into book (isbn, title, dtype, author_id) values ('523605403-6', 'Wise Blood', 'Book', 3);
+insert into book (isbn, title, dtype, author_id) values ('130780648-1', 'Mad Dog Time', 'Book', 1);
+
+insert into book (isbn, title, dtype, author_id, size_in, weight_lbs) values ('560087271-2', 'Carnage', 'PaperBack', 8, '10 inches', '175 lb');
+insert into book (isbn, title, dtype, author_id, size_in, weight_lbs) values ('631899254-5', 'Lupin the Third: The Secret of Mamo', 'PaperBack', 9, '25 inches', '190 lb');
+insert into book (isbn, title, dtype, author_id, size_in, weight_lbs) values ('554720638-5', 'Winter Soldier', 'PaperBack', 2, '20 inches', '180 lb');
+insert into book (isbn, title, dtype, author_id, size_in, weight_lbs) values ('074327567-5', 'Darkman', 'PaperBack', 8, '5 inches', '190 lb');
+insert into book (isbn, title, dtype, author_id, size_in, weight_lbs) values ('976803837-3', 'Beverly Hills Cop', 'PaperBack', 7, '10 inches', '170 lb');
+insert into book (isbn, title, dtype, author_id, size_in, weight_lbs) values ('720966776-8', 'Zorro, the Gay Blade', 'PaperBack', 6, '45 inches', '180 lb');
+insert into book (isbn, title, dtype, author_id, size_in, weight_lbs) values ('974665663-5', 'God''s Comedy (A Comédia de Deus)', 'PaperBack', 4, '25 inches', '145 lb');
+insert into book (isbn, title, dtype, author_id, size_in, weight_lbs) values ('882990900-9', 'Final, The', 'PaperBack', 3, '35 inches', '135 lb');
+insert into book (isbn, title, dtype, author_id, size_in, weight_lbs) values ('500722336-0', 'I aionia epistrofi tou Antoni Paraskeva', 'PaperBack', 5, '15 inches', '155 lb');
+insert into book (isbn, title, dtype, author_id, size_in, weight_lbs) values ('844497086-7', 'Comic Book Confidential', 'PaperBack', 9, '30 inches', '150 lb');
+
+insert into book (isbn, title, dtype, author_id, format) values ('925290033-0', 'Fear', 'Ebook', 4, 'DOCX');
+insert into book (isbn, title, dtype, author_id, format) values ('134335327-0', 'Thieves by Law (Ganavim Ba Hok)', 'Ebook', 8, 'PNG');
+insert into book (isbn, title, dtype, author_id, format) values ('540491676-1', 'Ali', 'Ebook', 8, 'JPEG');
+insert into book (isbn, title, dtype, author_id, format) values ('897658510-0', 'De la servitude moderne', 'Ebook', 8, 'HTML');
+insert into book (isbn, title, dtype, author_id, format) values ('453233596-5', 'Something''s Gonna Live', 'Ebook', 4, 'XLSX');
+insert into book (isbn, title, dtype, author_id, format) values ('678149781-2', 'No End in Sight', 'Ebook', 6, 'CSV');
+insert into book (isbn, title, dtype, author_id, format) values ('390969907-3', 'Cure', 'Ebook', 1, 'PDF');
+insert into book (isbn, title, dtype, author_id, format) values ('156488179-2', 'Strange Days', 'Ebook', 7, 'MP4');
+insert into book (isbn, title, dtype, author_id, format) values ('419272835-4', 'Gold of Rome (L''oro di Roma)', 'Ebook', 1, 'TXT');
+insert into book (isbn, title, dtype, author_id, format) values ('500745939-9', 'Wheel of Time', 'Ebook', 6, 'TXT');
