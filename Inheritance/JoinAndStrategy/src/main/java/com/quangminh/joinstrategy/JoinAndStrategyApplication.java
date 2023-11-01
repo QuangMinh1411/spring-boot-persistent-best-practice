@@ -1,6 +1,8 @@
 package com.quangminh.joinstrategy;
 
 import com.quangminh.joinstrategy.service.BookstoreService;
+import com.quangminh.joinstrategy.visitor.BookCoverVisitor;
+import com.quangminh.joinstrategy.visitor.BookFixHiperlinksVisitor;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,6 +26,10 @@ public class JoinAndStrategyApplication {
         return args -> {
             bookstoreService.persistAuthorWithBooks();
             bookstoreService.applyDelivers();
+
+            bookstoreService.persistAuthorWithBooks();
+            bookstoreService.applyVisitor(BookCoverVisitor.class);
+            bookstoreService.applyVisitor(BookFixHiperlinksVisitor.class);
         };
     }
 
